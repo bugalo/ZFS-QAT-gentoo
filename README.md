@@ -1,5 +1,5 @@
 # ZFS-QAT-gentoo
-This is an experimental overlay to add Intel QuickAssist support to ZFS in gentoo. Work in progress.
+This is an experimental repo to add Intel QuickAssist support to ZFS in gentoo. Work in progress.
 
 # Regarding QAT driver install
 Config options of the Linux Kernel:
@@ -16,6 +16,6 @@ Tested with kernel version 5.8.13.
 
 Limitations:
   - Several sandbox violations while emerging.
-  - Cannot use --enable-icp-log-syslog yet.
   - Cannot unmerge, need to manually do make uninstall.
   - It compiles and installs the drivers for all the devices, not only the ones present in the device. Don't know if and how this can be fixed, yet.
+  - At the moment it does not work with systemd.
