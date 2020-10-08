@@ -1,0 +1,10 @@
+--- a/quickassist/qat/compat/qat_compat.h	2020-09-09 15:30:06.000000000 +0200
++++ b/quickassist/qat/compat/qat_compat.h	2020-10-06 21:56:37.537170984 +0200
+@@ -474,4 +474,7 @@
+ #define pci_cleanup_aer_uncorrect_error_status(pdev) \
+ 	pci_aer_clear_nonfatal_status(pdev)
+ #endif /* SUSE15 SP2 */
++
++#define timespec timespec64
++#define getnstimeofday ktime_get_real_ts64
+ #endif /* _QAT_COMPAT_H_ */

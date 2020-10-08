@@ -1,0 +1,11 @@
+--- a/quickassist/qat/drivers/crypto/qat/qat_common/qat_algs.c	2020-09-09 15:30:08.000000000 +0200
++++ b/quickassist/qat/drivers/crypto/qat/qat_common/qat_algs.c	2020-10-07 18:18:43.964548626 +0200
+@@ -75,6 +75,8 @@
+ 				       ICP_QAT_HW_CIPHER_KEY_CONVERT, \
+ 				       ICP_QAT_HW_CIPHER_DECRYPT)
+ 
++#define CRYPTO_TFM_RES_BAD_KEY_LEN     0x00200000
++
+ static DEFINE_MUTEX(algs_lock);
+ static unsigned int active_devs;
+ 

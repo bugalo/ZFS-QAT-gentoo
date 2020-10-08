@@ -1,0 +1,11 @@
+--- a/quickassist/qat/drivers/crypto/qat/qat_common/adf_aer.c	2020-09-09 15:30:07.000000000 +0200
++++ b/quickassist/qat/drivers/crypto/qat/qat_common/adf_aer.c	2020-10-06 21:22:19.905244570 +0200
+@@ -303,7 +303,7 @@
+ 		pr_err("QAT: Can't find acceleration device\n");
+ 		return PCI_ERS_RESULT_DISCONNECT;
+ 	}
+-	pci_cleanup_aer_uncorrect_error_status(pdev);
++	pci_aer_clear_nonfatal_status(pdev);
+ 	if (adf_dev_aer_schedule_reset(accel_dev, ADF_DEV_RESET_SYNC))
+ 		return PCI_ERS_RESULT_DISCONNECT;
+ 

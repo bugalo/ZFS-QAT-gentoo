@@ -1,0 +1,11 @@
+--- a/quickassist/lookaside/access_layer/src/sample_code/performance/framework/linux/kernel_space/cpa_sample_code_utils.c	2020-09-09 15:31:39.000000000 +0200
++++ b/quickassist/lookaside/access_layer/src/sample_code/performance/framework/linux/kernel_space/cpa_sample_code_utils.c	2020-10-06 21:42:27.374201388 +0200
+@@ -107,6 +107,8 @@
+ extern struct device perf_device;
+ #endif
+ 
++#define timespec timespec64
++#define getnstimeofday ktime_get_real_ts64
+ 
+ /* Define a number for timeout */
+ #define SAMPLE_CODE_MAX_LONG (0x7FFFFFFF)
