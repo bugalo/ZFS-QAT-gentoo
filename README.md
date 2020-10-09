@@ -1,7 +1,11 @@
 # ZFS-QAT-gentoo
 This is an experimental repo to add Intel QuickAssist support to ZFS in gentoo. Work in progress.
 
+https://01.org/intel-quick-assist-technology/
+
 # Regarding QAT driver install
+Install the latest QAT 1.7 driver build publicly available: QAT1.7.L.4.11.0-00001.
+
 Config options of the Linux Kernel:
   - CONFIG_CRYPTO_DEV_QAT=m
   - CONFIG_CRYPTO_DEV_QAT_DH895xCC=m
